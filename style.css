@@ -1,0 +1,83 @@
+body{
+    width: 75vw;
+    margin: auto;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+h1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+p {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+label {
+    margin-right: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+input {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+input.checkbox {
+    margin-top: 10px;
+}
+
+input.expression {
+    margin-top: 20px;
+    width: 100%;
+    font-size: 14px;
+    text-align: center;
+    border-radius: 4px;
+    border: 2px solid #ccc;
+    box-shadow: 0px 0px 8px rgba(66,66,66,.50);
+    height: 22px;
+}
+
+input.expression:focus {
+    outline: none;
+}
+
+table.result {
+    margin-top: 20px;
+    border: 0px;
+    background-color: #EEEEEE;
+    width: 100%;
+    text-align: center;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+
+table.result td, table.result th {
+    border: 0px solid #DCDCDC;
+    padding: 6px 6px;
+}
+
+table.result tbody td {
+    font-size: 19px;
+}
+
+table.result tr:nth-child(1) {
+    background: #D1D1D1;
+}
+
+table.result thead {
+    background: #575757;
+    border-bottom: 2px solid #444444;
+}
+
+table.result thead th {
+    font-size: 15px;
+    font-weight: bold;
+    color: #FFFFFF;
+    border-left: 2px solid #D0E4F5;
+}
+
+table.result thead th:first-child {
+    border-left: none;
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Truth Table</title>
+
+  <link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+  <h1>Truth Table</h1>
+
+  <p>
+    This tool generates truth tables for propositional logic formulas.
+  </p>
+
+  <input type="checkbox" class="checkbox" id="invert"></input>
+  <label for="invert">Invert variables values</label>
+
+  <input type="checkbox" class="checkbox" id="sort"></input>
+  <label for="sort">Sort variables alphabetically</label>
+
+  <input type="text" class="expression" id="expression" placeholder="Enter a expression" />
+
+  <table id="table" class="result"></table>
+
+  <script src="/script.js"></script>
+
+</body>
+
+</html>
