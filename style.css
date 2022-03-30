@@ -15,6 +15,10 @@ p {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+a {
+    color: #0066ff;
+}
+
 label {
     margin-right: 18px;
     font-family: Arial, Helvetica, sans-serif;

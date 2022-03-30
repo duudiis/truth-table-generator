@@ -42,9 +42,7 @@ invert.addEventListener("click", () => {
 // Runs on input update
 
 expression.addEventListener("input", function (e) {
-
     updateTable(this.value);
-
 });
 
 function updateTable(expression) {
@@ -115,7 +113,7 @@ function solveExpression(expression) {
 
         const exec = /\([^()]+\)/g.exec(expression);
 
-        let pExpression = exec?.[0]?.slice(1, -1)?.split(" ").filter(n => n != "") ?? expression.split(" ");
+        let pExpression = exec?.[0]?.slice(1, -1)?.split(" ")?.filter(n => n != "") ?? expression.split(" ");
 
         if (pExpression.length == 1 && exec == null) { break; }
 
