@@ -109,13 +109,21 @@ function solveExpression(expression) {
 
     for (let i = 0; i == i; i++) {
 
-        // Get and refine parenthesis expression
+        // Get and refine parenthesis expression (or final expression)
 
         const exec = /\([^()]+\)/g.exec(expression);
 
         let pExpression = exec?.[0]?.slice(1, -1)?.split(" ")?.filter(n => n != "") ?? expression.split(" ");
 
-        if (pExpression.length == 1 && exec == null) { break; }
+        // Check if the parenthesis has only one variable (and if so, return that value only)
+
+        if (exec?.[0] && pExpression.length == 1) {
+
+            variables.set((i + 1).toString(), getVariable(variables, pExpression[0]));
+            expression = expression.replaceAll(exec?.[0], (i + 1).toString());
+            continue;
+
+        } else if (exec == null && pExpression.length == 1) { break; } // If there is no parenthesis and there is one value, that's the final result, break
 
         // Solve each operation inside parenthesis expression
 
@@ -193,10 +201,10 @@ function parseVariables(expression) {
 function getVariable(variables, variable) {
 
     // Checks if variable is negated
-    
+
     let invertVariable = false;
-    for (let symbol of truth.symbols.negation) {
-        if (variable.startsWith(symbol)) { invertVariable = true; variable = variable.replace(symbol, ""); }
+    for (let char of variable) {
+        if (truth.symbols.negation.includes(char)) { invertVariable = !invertVariable; variable = variable.replace(char, ""); }
     }
 
     // If the variable is negated, return the inverted value, else return the value
