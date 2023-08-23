@@ -1,12 +1,12 @@
 const truth = {
     symbols: {
-        negation: ["~", "!", "¬"],
+        negation: ["~", "!", "¬", "\neg"],
         operators: {
-            "and": ["&&", "&", "∧"],
-            "or": ["||", "|", "∨"],
-            "implication": ["->", "=>", ">", "→", "⇒"],
-            "biconditional": ["<->", "<=>", "<>", "↔", "=", "≡"],
-            "exclusive": ["&|", "|&", "⊕"],
+            "and": ["&&", "&", "∧", "\wedge"],
+            "or": ["||", "|", "∨", "\vee"],
+            "implication": ["->", "=>", ">", "→", "⇒", "\rightarrow"],
+            "biconditional": ["<->", "<=>", "<>", "↔", "=", "≡", "\leftrightarrow", "\equiv"],
+            "exclusive": ["&|", "|&", "⊕", "\oplus"],
             "nand": ["^", "↑"],
             "nor": ["v", "↓"]
         }
