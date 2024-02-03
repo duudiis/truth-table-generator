@@ -1,7 +1,7 @@
 # Truth Table Generator
 This is a website that generates truth tables!
 
-https://eduardoobladen.github.io/truth-table-generator/
+https://duudiis.github.io/truth-table-generator/
 
 Check below what are the accepted symbols and how to use the generator!
 
